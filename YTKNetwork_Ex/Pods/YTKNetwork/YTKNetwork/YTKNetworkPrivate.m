@@ -44,6 +44,7 @@ void YTKLog(NSString *format, ...) {
 
 @implementation YTKNetworkUtils
 
+// 判断Json里面的数据类型是不是指定的类， @{@"name": [NSString class]}
 + (BOOL)validateJSON:(id)json withValidator:(id)jsonValidator {
     if ([json isKindOfClass:[NSDictionary class]] &&
         [jsonValidator isKindOfClass:[NSDictionary class]]) {

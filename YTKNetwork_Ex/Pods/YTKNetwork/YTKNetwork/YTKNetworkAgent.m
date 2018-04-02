@@ -267,6 +267,7 @@
     }
 }
 
+// 检查类似是否是预定的类型
 - (BOOL)validateResult:(YTKBaseRequest *)request error:(NSError * _Nullable __autoreleasing *)error {
     BOOL result = [request statusCodeValidator];
     if (!result) {
@@ -359,7 +360,7 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         [request toggleAccessoriesWillStopCallBack];
         [request requestCompleteFilter];
-
+#warning 这里为什么不做responseToSelector判断
         if (request.delegate != nil) {
             [request.delegate requestFinished:request];
         }

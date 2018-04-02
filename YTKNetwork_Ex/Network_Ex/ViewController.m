@@ -20,8 +20,9 @@
     [super viewDidLoad];
     YTKNetworkConfig *config = [YTKNetworkConfig sharedConfig];
     config.baseUrl = @"http://api.juheapi.com";
-    
-    
+//    CFStringRef re = CFSTR("hshdhfh");
+//    NSString *d = (__bridge NSString *)re;
+//    CFStringRef dsf = (__bridge CFStringRef)d;;
 }
 
 - (IBAction)fetchDate:(id)sender {
